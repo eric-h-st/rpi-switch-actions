@@ -89,9 +89,12 @@ You will also need to change [line 7 of shutdown_button.py](https://github.com/s
 
 ### Software
 
+`git clone https://github.com/eric-h-st/rpi-switch-actions rpi-switch-actions`
+
 The software is installed with the following commands:
 
     sudo apt install python3-gpiozero
+    cd rpi-switch-actions
     sh install.sh
 
 You can use 'sh install.sh' to re-install, if changes are made, such as- replacing sound files or for configuration changes
