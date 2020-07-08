@@ -1,0 +1,13 @@
+[Unit]
+Description=GPIO switch custom actions
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/bin/python3 /usr/local/bin/switch_actions.py
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,20 @@
+{
+	"actions": [
+		{
+			"elapsedSeconds": 3,
+			"sound": "restartMM.wav",,
+			"action":  "pm2 start mm"
+		},
+		{
+			"elapsedSeconds": 6,
+			"sound": "reset.wav",
+			"action": "/sbin/reboot"
+		},
+		{
+			"elapsedSeconds": 9,
+			"sound": "shutdown.wav",
+			"action": "/sbin/poweroff"
+		}
+	],
+	"clickSound": "click.wav"
+}
