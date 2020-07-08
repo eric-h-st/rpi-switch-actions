@@ -1,14 +1,14 @@
 {
 	"hardwareBCMPin": 27,
-	"clickAction": "/usr/bin/tvservice -o" ,
-	"doubleClickAction": "/usr/bin/tvservice -p;chvt 6;chvt 7",
+	"clickAction": "/usr/bin/tvservice -o" , // Turn TV off
+	"doubleClickAction": "/usr/bin/tvservice -p;chvt 6;chvt 7", // Turn TV back on
 	"timedActions": [
-		{
-			"name": "Restart MM",
-			"elapsedSeconds": 3,
-			"sound": "restartMM.wav",
-			"action":  "runuser -l pi -c 'pm2 start mm'"
-		},
+//		{
+//			"name": "<your action name>",
+//			"elapsedSeconds": <number of seconds>,
+//			"sound": <your optional sound file>,
+//			"action":  <your action, running as root> 
+//		},
 		{
 			"name": "Reset RPI",
 			"elapsedSeconds": 6,
