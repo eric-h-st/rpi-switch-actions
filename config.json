@@ -1,16 +1,22 @@
 {
-	"actions": [
+	"hardwareBCMPin": 27,
+	"clickAction": "/usr/bin/tvservice -o" ,
+	"doubleClickAction": "/usr/bin/tvservice -p;chvt 6;chvt 7",
+	"timedActions": [
 		{
+			"name": "Restart MM",
 			"elapsedSeconds": 3,
 			"sound": "restartMM.wav",
 			"action":  "runuser -l pi -c 'pm2 start mm'"
 		},
 		{
+			"name": "Reset RPI",
 			"elapsedSeconds": 6,
 			"sound": "reset.wav",
 			"action": "/sbin/reboot"
 		},
 		{
+			"name": "Shutdown RPI",
 			"elapsedSeconds": 9,
 			"sound": "shutdown.wav",
 			"action": "/sbin/poweroff"
