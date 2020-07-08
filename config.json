@@ -2,8 +2,8 @@
 	"actions": [
 		{
 			"elapsedSeconds": 3,
-			"sound": "restartMM.wav",,
-			"action":  "pm2 start mm"
+			"sound": "restartMM.wav",
+			"action":  "runuser -l pi -c 'pm2 start mm'"
 		},
 		{
 			"elapsedSeconds": 6,

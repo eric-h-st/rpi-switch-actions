@@ -16,10 +16,9 @@ import json
 print('Started')
 path=os.path.dirname(os.path.realpath(__file__))
 
-print('Reading config');
-with open('config.json', 'r') as configFile:
+with open(path+'/config.json', 'r') as configFile:
     config = json.load(configFile);
-print('accessing actions')
+
 actions = config['actions']
 if (actions is None):
     exit('Error reading config: actions is mandatory')
@@ -29,10 +28,10 @@ actions.sort(key=lambda x: x.get('elapsedSeconds'))
 mixer.init()
 
 if (config['clickSound'] is not None):
-    clickSound = mixer.Sound(config['clickSound'])
+    clickSound = mixer.Sound(path+"/"+config['clickSound'])
 for action in actions:
     if (action['sound'] is not None):
-        action['soundModule'] = mixer.Sound(action['sound'])
+        action['soundModule'] = mixer.Sound(path+"/"+action['sound'])
     else:
         action['soundModule'] = None
 
