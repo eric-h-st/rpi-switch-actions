@@ -18,7 +18,7 @@ All of the above is configurable by changing the 'config.json' file.
 
 ### Configuration
 The default configuration supports the above, but everything is configurable. 
-```json
+```javascript
 {
         "hardwareBCMPin": 27, 
         "clickAction": "/usr/bin/tvservice -o" , // optional. The default action is- Turn TV off
